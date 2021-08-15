@@ -84,10 +84,17 @@ const Calculate = () => {
                 required
               />
               <TextField
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                   %
+                  </InputAdornment>
+                ),
+              }}
                 margin="dense"
                 onChange={handleHumidity}
                 value={humidity}
-                inputProps={{ max: 100 }}
+                inputProps={{ max: 100, min: 0 }}
                 id="Humidity"
                 type="number"
                 label="Relative Humidity"
